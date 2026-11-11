@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiranjit Tripura – Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config for specific colors to match the prompt -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e3a5f',
+                            900: '#0f2040',
+                        },
+                        softgray: '#f4f7f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom progress bar animation */
+        @keyframes fillProgress {
+            from { width: 0; }
+        }
+        .progress-bar-fill {
+            animation: fillProgress 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-softgray text-gray-800 antialiased selection:bg-navy-800 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-navy-900 tracking-tight">
+                        <span class="text-blue-600">C</span>.Tripura
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-navy-900 font-medium transition-colors">Home</a>
+                    <a href="#experience" class="text-gray-600 hover:text-navy-900 font-medium transition-colors">Experience</a>
+                    <a href="#education" class="text-gray-600 hover:text-navy-900 font-medium transition-colors">Education</a>
+                    <a href="#skills" class="text-gray-600 hover:text-navy-900 font-medium transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-navy-900 font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-navy-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50 rounded-md">Experience</a>
+                <a href="#education" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50 rounded-md">Education</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50 rounded-md">Skills</a>
+                <a href="#contact" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-20 md:pt-40 md:pb-28 bg-navy-900 text-white min-h-[90vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                
+                <!-- Text Content -->
+                <div class="w-full md:w-3/5 text-center md:text-left">
+                    <p class="text-blue-400 font-medium tracking-wide uppercase mb-3">Welcome to my portfolio</p>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Hi, I'm <span class="text-white">Chiranjit Tripura</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 font-light mb-8">
+                        KYC & AML Analyst · Bengaluru, India
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        I’m a KYC analyst with three years of experience in client onboarding and customer due diligence at a fintech company. I care about keeping customers safe, following the rules, and making the process smooth for everyone.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-blue-500/30 text-center">
+                            Get in Touch
+                        </a>
+                        <a href="#experience" class="px-8 py-3 bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-navy-900 text-white font-medium rounded-lg transition-all text-center">
+                            View Experience
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Picture -->
+                <div class="w-full md:w-2/5 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 opacity-75 blur-lg"></div>
+                        <img src="https://placehold.co/400x400/1e3a5f/ffffff?text=Chiranjit+Tripura" alt="Chiranjit Tripura - KYC Analyst" class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-navy-900 shadow-2xl">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-softgray">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Experience</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Experience Card -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy-900 group-hover:text-blue-600 transition-colors">KYC Analyst</h3>
+                            <p class="text-lg text-gray-600 font-medium mt-1">Groww</p>
+                        </div>
+                        <span class="inline-block mt-3 md:mt-0 px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold border border-blue-100">
+                            2022 – Present
+                        </span>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Review customer documents, run due diligence checks, and onboard clients accurately and on time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Education & Certifications</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education Card -->
+                <div class="bg-softgray rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-navy-900 text-white rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-2">BBA in Finance</h3>
+                    <p class="text-sm text-gray-600 font-medium mb-4">East West College of Management, Bengaluru University</p>
+                    <p class="text-blue-600 text-sm font-semibold">2019 – 2022</p>
+                </div>
+
+                <!-- Certification Card -->
+                <div class="bg-softgray rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-navy-900 text-white rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-2">AML Certification</h3>
+                    <p class="text-sm text-gray-600 font-medium mb-4">ICA / ACAMS</p>
+                    <p class="text-blue-600 text-sm font-semibold">In progress</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-softgray">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="bg-white p-10 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-center">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">KYC / CDD</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Client onboarding</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Corporate KYB due diligence</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">UBO verification</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">AML transaction monitoring</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Risk assessment</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Attention to detail</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Customer communication</span>
+                    <span class="px-5 py-3 bg-blue-50 text-navy-800 rounded-full text-sm font-semibold border border-blue-100 hover:bg-navy-900 hover:text-white transition-colors cursor-default shadow-sm">Hindi & English</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-navy-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400">Feel free to reach out for opportunities or connections.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden text-gray-800 flex justify-center">
+                <div class="w-full bg-navy-800 text-white p-8 md:p-12 flex flex-col items-center justify-center text-center">
+                    <h3 class="text-2xl font-semibold mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6 w-full max-w-md">
+                        <div class="flex items-center p-5 bg-navy-900 rounded-lg border border-navy-700 hover:border-blue-500 transition-colors">
+                            <i class="fas fa-envelope text-blue-400 text-3xl w-12 text-center"></i>
+                            <div class="text-left ml-4 flex-1">
+                                <h4 class="font-medium text-gray-200">Email</h4>
+                                <a href="mailto:chiranjittripura888@gmail.com" class="text-gray-400 hover:text-white text-sm mt-1 transition-colors">chiranjittripura888@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-5 bg-navy-900 rounded-lg border border-navy-700 hover:border-blue-500 transition-colors">
+                            <i class="fab fa-linkedin text-blue-400 text-3xl w-12 text-center"></i>
+                            <div class="text-left ml-4 flex-1">
+                                <h4 class="font-medium text-gray-200">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/chiranjit-tripura" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 text-sm mt-1 inline-block transition-colors">linkedin.com/in/chiranjit-tripura</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-800 text-gray-400 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; <span id="year"></span> Chiranjit Tripura. All rights reserved.</p>
+            <p class="text-sm mt-2">KYC & AML Analyst</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
